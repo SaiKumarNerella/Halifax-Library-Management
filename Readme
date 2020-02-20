@@ -1,0 +1,30 @@
+Input Files:
+Given:
+1. existing_tables.sql
+2. articles.json
+
+Created & Shared:
+3. new_tables.sql
+4.data2mongo.sh
+5.mongo2sql.sh
+6.csv_to_sql.py
+7.data_to_mongo.py
+
+
+Order of Execution:
+1. data2mongo.sh #bash data2mongo.sh <dbname> <userid> <pwd>
+2. mongo2sql.sh  #bash mongo2sql.sh <dbname> <userid> <pwd>
+
+Note: During the execution of the above bash script, 5 csv files(author.csv,article.csv,magzine.csv,author_article.csv )will be generated which will be used in the second bash script to update corresponding tables in the database.
+During the execution a .sql file(insert_queries.sql) will be generated and will be used to insert the data in MYSQL Database.
+
+Tables created at end of execution of bash scripts in MYSQL Database
+| ARTICLES          |
+| ARTICLE_WRITTEN   |
+| AUTHOR            |
+| CUSTOMER          |
+| ITEM              |
+| MAGAZINE          |
+| TRANSACTIONDETAIL |
+| TRANSACTIONS      |
+| VOLUME 			|
